@@ -1,0 +1,9 @@
+{
+  "name": "OpenConnector | Self-Hosted Composio Alternative for AI Agents",
+  "short_name": "OpenConnector",
+  "description": "Connect 1,000+ apps to your AI agents over MCP, SDK or HTTP. Self-hosted.",
+  "category": "AI/ML",
+  "image": "https://raw.githubusercontent.com/nomideusz/openconnector-railway/main/icon.png",
+  "card_desc": "OpenConnector by OOMOL: a self-hosted connector gateway, the open alternative to Composio and Pipedream. Connect app accounts once and give your agents 10,000+ ready-made actions over MCP, SDK or HTTP, with tokens, scopes and allow/block policies.",
+  "deploy_marker": "ghcr.io/oomol-lab/open-connector:v1.9.0"
+}
