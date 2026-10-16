@@ -2,7 +2,7 @@
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/openconnector?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=openconnector)
 
-[OpenConnector](https://github.com/oomol-lab/open-connector) by OOMOL is a self-hosted connector gateway for AI agents, an open-source alternative to Composio and Pipedream Connect. You connect your app accounts (GitHub, Slack, Notion, Google, Linear, HubSpot and 1,000+ more) once. Your agents then get 10,000+ ready-made actions through one MCP endpoint, a TypeScript SDK, or plain HTTP. Credentials stay on your own server, encrypted. Every call goes through your tokens, scopes and allow/block rules, and shows up in a run log.
+[OpenConnector](https://github.com/oomol-lab/open-connector) by OOMOL is a self-hosted connector gateway for AI agents, an open-source alternative to Composio and Pipedream Connect. You connect your app accounts (GitHub, Slack, Notion, Google, Linear, HubSpot and 1,600+ more) once. Your agents then get 19,000+ ready-made actions through one MCP endpoint, a TypeScript SDK, or plain HTTP. Credentials stay on your own server, encrypted. Every call goes through your tokens, scopes and allow/block rules, and shows up in a run log.
 
 ## About Hosting OpenConnector
 
@@ -33,7 +33,7 @@ It's one service with a Railway volume. Connections, OAuth app settings, tokens 
 
 **Sign in.** Open the service's Railway domain and paste `OOMOL_CONNECT_ADMIN_TOKEN` from the Variables tab. The console lists every provider. Pick one to add an API key or an OAuth app, then connect your account.
 
-**OAuth apps.** For a provider that uses OAuth, create an OAuth app in its developer settings. Use the callback URL the console shows, which is on your Railway domain. Then paste the client ID and secret into the console. If you add a custom domain, update `OOMOL_CONNECT_ORIGIN` and the callback URLs.
+**OAuth apps.** For a provider that uses OAuth, create an OAuth app in its developer settings with the callback URL `https://<your-domain>/oauth/callback`. Then paste the client ID and secret into the console. If you add a custom domain, update `OOMOL_CONNECT_ORIGIN` and the callback URLs to match.
 
 **Connect an agent over MCP.** Point any MCP client at `https://<your-domain>/mcp` with the header `Authorization: Bearer <OOMOL_CONNECT_RUNTIME_TOKEN>`. For example, in Claude Code:
 
@@ -48,7 +48,7 @@ The agent gets a small set of tools to search apps and actions, read their schem
 
 **Keep the encryption key.** `OOMOL_CONNECT_ENCRYPTION_KEY` encrypts every stored credential. If you change or lose it, the saved connections can't be decrypted and have to be connected again.
 
-**Resources.** The runtime idles at about 270 MB of RAM and uses almost no CPU between calls.
+**Resources.** On Railway the runtime idles at about 150–200 MB of RAM and uses almost no CPU between calls, so it fits every Railway plan, including Free.
 
 ## Why Deploy OpenConnector on Railway?
 
