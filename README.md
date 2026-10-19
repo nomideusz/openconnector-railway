@@ -27,7 +27,7 @@ It's one service with a Railway volume. Connections, OAuth app settings, tokens 
 
 - [OpenConnector on GitHub](https://github.com/oomol-lab/open-connector)
 - [Configuration reference](https://github.com/oomol-lab/open-connector/blob/main/docs/configuration.md)
-- [Template source on GitHub](https://github.com/nomideusz/openconnector-railway)
+- [Template source on GitHub](https://github.com/two-workspaces/openconnector)
 
 ### Implementation Details
 
